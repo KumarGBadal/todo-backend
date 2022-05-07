@@ -1,0 +1,19 @@
+{
+  "name": "todo-backend",
+  "version": "1.0.0",
+  "description": "All the APIs related to todo website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KumarGBadal/todo-backend.git"
+  },
+  "author": "Gaurav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KumarGBadal/todo-backend/issues"
+  },
+  "homepage": "https://github.com/KumarGBadal/todo-backend#readme"
+}
