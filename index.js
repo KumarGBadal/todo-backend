@@ -1,23 +1,27 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const routes = require("./routes/routes");
+const express = require('express')
+const apirouter = require('./routes/api-routes')
+const mongoose = require('mongoose')
 
-const app = express();
+const app = express()
 
-app.use(express.json());
+const port = 3005
+app.use(express.json())
 
-app.use("/", routes);
 
-const url =
-  "mongodb+srv://dasurahul:12345@cluster0.swidc.mongodb.net/TodoApp?retryWrites=true&w=majority";
+app.use('/',apirouter)
 
-mongoose
-  .connect(url, { useNewUrlParser: true })
-  .then(() => {
-    console.log("database connected");
-  })
-  .catch((err) => console.log(err));
+const url = "mongodb+srv://gaurav:12345@cluster0.rqxya.mongodb.net/todo?retryWrites=true&w=majority"
 
-app.listen(3000, () => {
-  console.log("App listening on port 3000");
-});
+
+mongoose.connect(url , {useNewUrlParser:true})
+.then(()=>{
+    console.log("database connected")
+})
+.catch(err => console.log(err))
+
+app.listen(port, () =>{
+    console.log(`database is running on http://localhost:${port}`)
+})
+
+
+
